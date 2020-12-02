@@ -1,0 +1,6 @@
+C:\Users\abaloch\Desktop\ElevenFiftyProjects\DotNetProjects\DevTeams Project\DevTeamsProject-master\DevTeamsProject\bin\Debug\DevTeamsProject.dll
+C:\Users\abaloch\Desktop\ElevenFiftyProjects\DotNetProjects\DevTeams Project\DevTeamsProject-master\DevTeamsProject\bin\Debug\DevTeamsProject.pdb
+C:\Users\abaloch\Desktop\ElevenFiftyProjects\DotNetProjects\DevTeams Project\DevTeamsProject-master\DevTeamsProject\obj\Debug\DevTeamsProject.csprojAssemblyReference.cache
+C:\Users\abaloch\Desktop\ElevenFiftyProjects\DotNetProjects\DevTeams Project\DevTeamsProject-master\DevTeamsProject\obj\Debug\DevTeamsProject.csproj.CoreCompileInputs.cache
+C:\Users\abaloch\Desktop\ElevenFiftyProjects\DotNetProjects\DevTeams Project\DevTeamsProject-master\DevTeamsProject\obj\Debug\DevTeamsProject.dll
+C:\Users\abaloch\Desktop\ElevenFiftyProjects\DotNetProjects\DevTeams Project\DevTeamsProject-master\DevTeamsProject\obj\Debug\DevTeamsProject.pdb

@@ -1,0 +1,10 @@
+C:\Users\abaloch\Desktop\ElevenFiftyProjects\DotNetProjects\DevTeams Project\DevTeamsProject-master\ProgramDev-UI\obj\Debug\ProgramDev-UI-Console.csprojAssemblyReference.cache
+C:\Users\abaloch\Desktop\ElevenFiftyProjects\DotNetProjects\DevTeams Project\DevTeamsProject-master\ProgramDev-UI\obj\Debug\ProgramDev-UI-Console.csproj.CoreCompileInputs.cache
+C:\Users\abaloch\Desktop\ElevenFiftyProjects\DotNetProjects\DevTeams Project\DevTeamsProject-master\ProgramDev-UI\bin\Debug\ProgramDev-UI.exe.config
+C:\Users\abaloch\Desktop\ElevenFiftyProjects\DotNetProjects\DevTeams Project\DevTeamsProject-master\ProgramDev-UI\bin\Debug\ProgramDev-UI.exe
+C:\Users\abaloch\Desktop\ElevenFiftyProjects\DotNetProjects\DevTeams Project\DevTeamsProject-master\ProgramDev-UI\bin\Debug\ProgramDev-UI.pdb
+C:\Users\abaloch\Desktop\ElevenFiftyProjects\DotNetProjects\DevTeams Project\DevTeamsProject-master\ProgramDev-UI\bin\Debug\DevTeamsProject.dll
+C:\Users\abaloch\Desktop\ElevenFiftyProjects\DotNetProjects\DevTeams Project\DevTeamsProject-master\ProgramDev-UI\bin\Debug\DevTeamsProject.pdb
+C:\Users\abaloch\Desktop\ElevenFiftyProjects\DotNetProjects\DevTeams Project\DevTeamsProject-master\ProgramDev-UI\obj\Debug\ProgramDev-UI-Console.csproj.CopyComplete
+C:\Users\abaloch\Desktop\ElevenFiftyProjects\DotNetProjects\DevTeams Project\DevTeamsProject-master\ProgramDev-UI\obj\Debug\ProgramDev-UI.exe
+C:\Users\abaloch\Desktop\ElevenFiftyProjects\DotNetProjects\DevTeams Project\DevTeamsProject-master\ProgramDev-UI\obj\Debug\ProgramDev-UI.pdb
