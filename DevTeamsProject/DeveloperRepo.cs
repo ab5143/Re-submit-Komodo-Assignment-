@@ -9,7 +9,7 @@ namespace DevTeamsProject
     public class DeveloperRepo 
     {
         private readonly List<Developer> _developerDirectory = new List<Developer>();
-
+        //CRUD
         //Developer Create
         public void AddNamesToList(Developer content)
         {
@@ -101,6 +101,7 @@ namespace DevTeamsProject
 
         public Developer GetName(int idX)
         {
+            /////////////content below is arbitrary - varible
             foreach (Developer content in _developerDirectory)
             {
                 if (content.Id == idX)

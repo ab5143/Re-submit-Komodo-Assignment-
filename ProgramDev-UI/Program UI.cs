@@ -10,7 +10,9 @@ namespace ProgramDev_UI
     class ProgramUI
     {
 
-
+        
+        /// </summary
+        /// you have to create it here in program UI
         private DeveloperRepo _contentDeveloper = new DeveloperRepo();
         private DevTeamRepo _devTeamRepo = new DevTeamRepo();
 
@@ -21,9 +23,10 @@ namespace ProgramDev_UI
         }
 
 
-
         private void Menu()
         {
+
+            //??
             bool keepRunning = true;
             while (keepRunning)
             {
@@ -34,9 +37,11 @@ namespace ProgramDev_UI
                     "1. Create New Developer\n" +
                     "2. View All Developers\n" +
                     "3. Developers with Access To Pluralsight\n" +
-                    "4. Create Teams\n" +
-                    "5. Read Teams\n" +
-                    "6. Exit");
+                    "4. Update Developers\n" +
+                    "5. Delete Developers\n" +
+                    "6. Create Teams\n" +
+                    "7. Read Teams\n" +
+                    "8. Exit");
 
 
                 //Get the User's Input
@@ -58,14 +63,22 @@ namespace ProgramDev_UI
                         DisplayNameswithPluralsight();
                         break;
                     case "4":
+                        //Update Developers ----------------------------------------------------------
+                        UpdateDevelopers();
+                        break;
+                    case "5":
+                        //Delete Developers ----------------------------------------------------------
+                        DeleteDevelopers();
+                        break;
+                    case "6":
                         // Create NewDevTeams
                         CreateNewTeams();
                         break;
-                    case "5":
+                    case "7":
                         // Read List of DevTeams
                         ReadDevTeams();
                         break;
-                    case "6":
+                    case "8":
                         //Exit 
                         Console.WriteLine("Goodbye!");
                         keepRunning = false;
@@ -82,53 +95,8 @@ namespace ProgramDev_UI
             }
 
         }
-        // 4. CreateDevTeams 
-        private void CreateNewTeams()
-        {
-            Console.Clear();
-            DevTeamContent newTeam = new DevTeamContent();
 
-            //Names 
-
-            Console.WriteLine("Enter the new DevTeam Name");
-            newTeam.TeamName = Console.ReadLine();
-
-            //Number
-            Console.WriteLine("Enter the Number for the Team");
-            newTeam.TeamNumber =  int.Parse(Console.ReadLine());
-            // Console.Readline does not read numbers only words so use Parse to convert it
-
-            // Add DevTeam to the Repo
-            _devTeamRepo.AddContentToList(newTeam);
-        }
-
-
-
-        //5.  Read List of DevTeams 
-
-        private void ReadDevTeams()
-        {
-            Console.Clear();
-            List<DevTeamContent> listOfTeams = _devTeamRepo.GetContentList();
-
-            foreach (DevTeamContent devTeam in listOfTeams)
-            {
-                Console.WriteLine(devTeam.TeamName);
-            }
-
-
-
-
-
-
-        }
-
-
-
-
-
-
-                // 1 Create New Names 
+        // 1 Create New Names 
 
         private void CreateNewName()
         {
@@ -200,12 +168,7 @@ namespace ProgramDev_UI
 
         }
 
-
-
-
-
-
-        //View Existing Content-Names
+                //View Existing Content-Names
         private void NamesWithPluralsight()
         {
             Console.Clear();
@@ -232,51 +195,70 @@ namespace ProgramDev_UI
             }
 
         }
-        //update Existing Content
-        private void UpdateExistingContent()
+        //  4.     update Developers-------------------------------------------------------------------------------
+        private void UpdateDevelopers()
         {
             //Display All Content 
             DisplayAllNames();
 
             //As for the name of the content to update
-            Console.WriteLine("Enter the Name of the Content you'd Like to Update");
+            Console.WriteLine("Enter the ID of the Developer you'd Like to Update");
 
             //Get The Name
+            ///oldname is user input - do not have to match up
             string OldName = Console.ReadLine();
             int Num = int.Parse(OldName);
 
-            //WWe will build a new object 
+            //We will add the new Developer 
             Developer newContent = new Developer();
 
             //Name     ---------------------------Ask ???????
-            Console.WriteLine("Enter the name for the Developer");
+            Console.WriteLine("Enter the new name for the Developer");
             newContent.Name = Console.ReadLine();
 
-            //Verify Update Work
+            //ID 
+            Console.WriteLine("Enter the new ID");
+            newContent.Id = int.Parse(Console.ReadLine());
+
+            //Access ro pluralsight 
+            Console.WriteLine("Do they have Access to PluralSight for the New Developer");
+            string YesNo = Console.ReadLine().ToLower();
+
+            if (YesNo == "y")
+            {
+                newContent.AccessToPluralSight = true;
+            }
+            else
+            {
+                newContent.AccessToPluralSight = false;
+            }
+            
+
+            //    Verify Update Work
             bool wasUpdated = _contentDeveloper.UpdateExistingNames(Num, newContent);
 
             if (wasUpdated)
             {
-                Console.WriteLine("Content was Updated!");
+                Console.WriteLine("Dveloper was Updated!");
             }
             else
             {
-                Console.WriteLine("Could not Update Content");
+                Console.WriteLine("Developer Could not Update Developer");
             }
 
 
         }
 
-        //delete existing content 
+        //5.      delete existing content 
 
-        private void DeleteExistingContent()
+        private void DeleteDevelopers()
         {
 
             DisplayAllNames();
 
             //Get the names they want to remove 
-            Console.WriteLine("\nEnter the title of the content you would like to remove");
-
+            Console.WriteLine("Enter the ID of the Developer you would like to remove");
+            //// Atif please remember that Console.readline only takes string hence we parse
             string input = Console.ReadLine();
             int Intp = int.Parse(input);
             //Call the delete method
@@ -286,11 +268,45 @@ namespace ProgramDev_UI
 
             if (wasDeleted)
             {
-                Console.WriteLine("The Content was successfully Deleted");
+                Console.WriteLine("The Developer was successfully Deleted");
             }
             else
             {
-                Console.WriteLine("The Content could not be deleted");
+                Console.WriteLine("The Developer could not be deleted");
+            }
+
+        }
+
+        // 6. CreateDevTeams 
+        private void CreateNewTeams()
+        {
+            Console.Clear();
+            DevTeamContent newTeam = new DevTeamContent();
+
+            //Names 
+
+            Console.WriteLine("Enter the new DevTeam Name");
+            newTeam.TeamName = Console.ReadLine();
+
+            //Number
+            Console.WriteLine("Enter the Number for the Team");
+            newTeam.TeamNumber = int.Parse(Console.ReadLine());
+            // Console.Readline does not read numbers only words so use Parse to convert it
+
+            // Add DevTeam to the Repo
+            _devTeamRepo.AddContentToList(newTeam);
+        }
+
+        //7.  Read List of DevTeams 
+
+        private void ReadDevTeams()
+        {
+            Console.Clear();
+            List<DevTeamContent> listOfTeams = _devTeamRepo.GetContentList();
+
+            foreach (DevTeamContent devTeam in listOfTeams)
+            {
+                Console.WriteLine(devTeam.TeamName);
             }
 
         }
@@ -308,62 +324,10 @@ namespace ProgramDev_UI
             _contentDeveloper.AddNamesToList(Atif);
 
 
-
-
-
-
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
 
 
 }
